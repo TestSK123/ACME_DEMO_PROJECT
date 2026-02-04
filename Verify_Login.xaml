@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>559.2,2264.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1100,2817.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Verify_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,33 +110,35 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verify_Login" sap:VirtualizedContainerService.HintSize="1022,2248" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verify_Login" sap:VirtualizedContainerService.HintSize="1110.4,2752.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1022,124" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Login Started" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="1022,1986.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="905405eb-ff09-4397-b283-982da1164c9a" Version="V2">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1048,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Login Started" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="1048,2380" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="905405eb-ff09-4397-b283-982da1164c9a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1731.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,2163.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_lbl_Dashboard" />
+              <Variable x:TypeArguments="x:String" Name="str_lblLogin" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Login'" sap:VirtualizedContainerService.HintSize="954,515.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Login'" sap:VirtualizedContainerService.HintSize="952,491.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,97.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -145,13 +147,13 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="416,188.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" CvTextArea="1737, 299, 78, 22" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1717, 270, 120, 75" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="c2dc620a-58cc-423b-90b9-37baa11a6535" InformativeScreenshot="d309c60432fcec12bf682465285a88a8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -168,7 +170,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,262" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Text="testd2692@gmail.com" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Text="testd2692@gmail.com" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CvElementArea="334, 593, 609, 48" CvType="InputBox" DesignTimeRectangle="334, 596, 606, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ' aaname='Email:' /&gt;" Guid="db97173e-b908-41dd-906c-372cbd22549b" InformativeScreenshot="221f845cf7632dba1c66d48daff549af.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -185,7 +187,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,262" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Text="Test@123" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Text="Test@123" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CvElementArea="333, 686, 609, 46" CvType="InputBox" DesignTimeRectangle="334, 689, 606, 43" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control ' aaname='Password:' /&gt;" Guid="903ea901-ca82-498f-a4e4-6fd2b13b65ba" InformativeScreenshot="cd13fe2ca255d697119d54105042e702.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -202,7 +204,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="954,61.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="952,24.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CvElementArea="332, 800, 78, 45" CvTextArea="349, 812, 45, 21" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="334, 802, 75, 42" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary' aaname='                             Login                         ' check:innerText='Login' /&gt;" Guid="fea6e4b4-085b-43e1-b26f-17a673546887" InformativeScreenshot="526108cda8ea894a4ba3a3dcb048360b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -213,7 +215,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NGetText DelayBefore="3" DisplayName="Get Text 'Dashboard'" sap:VirtualizedContainerService.HintSize="954,61.333333333333336" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" TextString="[str_lbl_Dashboard]" Version="V3">
+            <uix:NGetText DelayBefore="3" DisplayName="Get Text 'Dashboard'" sap:VirtualizedContainerService.HintSize="952,24.8" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" TextString="[str_lbl_Dashboard]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" CvTextArea="246, 342, 221, 37" CvType="AnyWordGroup" DesignTimeRectangle="247, 338, 1425, 62" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Dashboard'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='page-header' /&gt;" Guid="f444a52e-5459-4497-9690-bc3682ffcdac" ImageBase64="" InformativeScreenshot="8cec935ca6e61682c73494a30a32666e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NGetText.Target>
@@ -224,25 +226,92 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <If Condition="[str_lbl_Dashboard.Equals(&quot;Dashboard&quot;)]" sap:VirtualizedContainerService.HintSize="954,502.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[str_lbl_Dashboard.Equals(&quot;Dashboard&quot;)]" sap:VirtualizedContainerService.HintSize="952,24.8" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,182.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,118.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Login Success" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Login Success" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,182.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,118.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Login Failed" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Login Failed" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NCheckState DisplayName="Check App State 'Log Out'" sap:VirtualizedContainerService.HintSize="952,24.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/home" CvTextArea="1609, 181, 63, 20" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1591, 160, 100, 63" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="510dbd93-6abe-48db-808d-9b97d0caf437" InformativeScreenshot="ac7c93c4c1cb11300a73b9e254ae1b0e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/home" CvTextArea="1609, 181, 63, 20" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1591, 160, 100, 63" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="23acf761-142f-45ca-a63d-6bef1342d8d5" InformativeScreenshot="f2a06c565b448dd95b7a0ffef6f0aafb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NGetText DisplayName="Get Text 'To continue,'" sap:VirtualizedContainerService.HintSize="952,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" TextString="[str_lblLogin]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CvTextArea="341, 455, 501, 27" CvType="AnyWordGroup" DesignTimeRectangle="344, 454, 606, 33" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'To continue,'" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='' /&gt;" Guid="697a83c8-dfbf-4fe7-9bde-24c85dbf1976" ImageBase64="" InformativeScreenshot="7afabee3274411c0d15ae76b58db8c64.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <If Condition="[str_lblLogin.Equals(&quot;To continue, please authenticate here&quot;)]" sap:VirtualizedContainerService.HintSize="952,543.2" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Logout Success" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Logout Failed" />
                 </Sequence>
               </If.Else>
             </If>
@@ -259,6 +328,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1022,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Login End" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1048,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Login End" />
   </Sequence>
 </Activity>
