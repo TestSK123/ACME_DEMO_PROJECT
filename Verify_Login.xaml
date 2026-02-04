@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Verify_Login" this:Verify_Login.In_UserName="testd2692@gmail.com" this:Verify_Login.In_Url="https://acme-test.uipath.com/login" this:Verify_Login.In_Password="Test@123" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Verify_Login" this:Verify_Login.In_UserName="testd2692@gmail.com" this:Verify_Login.In_Url="https://acme-test.uipath.com/login" this:Verify_Login.In_Password="Test@123" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_UserName" Type="InArgument(x:String)" />
     <x:Property Name="In_Url" Type="InArgument(x:String)" />
@@ -112,22 +112,23 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verify_Login" sap:VirtualizedContainerService.HintSize="1022,2248" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verify_Login" sap:VirtualizedContainerService.HintSize="1022,3250.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1022,124" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Login Started" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="1022,1986.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="905405eb-ff09-4397-b283-982da1164c9a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="1022,2989.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="905405eb-ff09-4397-b283-982da1164c9a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1731.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,2734" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_lbl_Dashboard" />
+              <Variable x:TypeArguments="x:String" Name="txtLogIn" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -213,18 +214,24 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NGetText DelayBefore="3" DisplayName="Get Text 'Dashboard'" sap:VirtualizedContainerService.HintSize="954,61.333333333333336" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" TextString="[str_lbl_Dashboard]" Version="V3">
+            <uix:NGetText DelayBefore="3" DisplayName="Get Text 'Dashboard'" sap:VirtualizedContainerService.HintSize="954,195.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" TextString="[str_lbl_Dashboard]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" CvTextArea="246, 342, 221, 37" CvType="AnyWordGroup" DesignTimeRectangle="247, 338, 1425, 62" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Dashboard'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='page-header' /&gt;" Guid="f444a52e-5459-4497-9690-bc3682ffcdac" ImageBase64="" InformativeScreenshot="8cec935ca6e61682c73494a30a32666e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NGetText.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <If Condition="[str_lbl_Dashboard.Equals(&quot;Dashboard&quot;)]" sap:VirtualizedContainerService.HintSize="954,502.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[str_lbl_Dashboard.Equals(&quot;Dashboard&quot;)]" sap:VirtualizedContainerService.HintSize="954,509.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,182.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -243,6 +250,67 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,118.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Login Failed" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NCheckState DisplayName="Check App State 'Log Out'" sap:VirtualizedContainerService.HintSize="954,61.333333333333336" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="416,188.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" DesignTimeRectangle="1717, 270, 120, 75" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="51b7b84d-da9b-4aa4-9f28-bb2fad5aa4dd" InformativeScreenshot="2224553cc9b36d6a01a55fddb0864f00.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,97.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" CvTextArea="1737, 299, 78, 22" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1717, 270, 120, 75" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="13f0c6fa-0c11-45f6-98ac-0c96e5e5556a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAABPCAYAAAAp8KG9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARUSURBVHhe7Zphi9pIGMfzcj+HblNrwRcWPLaLlFoqlCMvdqGBShHk8IXHuhQp0giRQ+6CgQY2YMDA5sOV+yD/I5lEYyZno7VWfJ7Aj5XMTGacX2bmmXEV8EXqUrI3+Drvi4UTu5Rv/34DQwel8uwZGDooTysVMHRQ1EoFDB0UVVXB0EG5fPIEDB2U8uUlGDoo5XIZDB2UUqkEhg4snBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBgsnBhHE65PAwRBAPO9nHaKqNe3GExsuEvR7oilC3sywO21KuXfDxVXHwwMb7L3fx4sXKKGd/fOSrLvObAmBoyJCdv1V/fdzxpqUtnduBqIeo7ZJyw8Q/PPWLY3QzdnJKvXHRhu/DJMblHNeUZRkrqO2ScsPM3bEdxo6jah13LSE2o6zGiq9zHWctILwsIz1N90YXz14D/Ga6jvwv7cwdVTOW+p9g79qbPOu3Rg6I2dOjVpo91vSGlZah8tUc+ssxrloryDQVPOv5nWxMBJxQYxRdr4o5ys8Ga8vgWPPty5KdbQRSIzMwJXIy5AsLBhTgxYjlhv/aX4+/16NYz98Bk2ei+yaTk878KK2mdCL4t7xYXXcXtvYBa30ZuHMYKB3hu53KE5TeHNAZxI7Azd39JpKlp38Ysw76ER39e+iI5z7lpQU89pdC34RUfPix7sKK8JPZuWSxPDh03BxYULdpl9DsVJCm9/8qK8+VNrC8MoaIo773kHs3AaX4zQlvI20LcL1pu8ZM4AzWxaLsm0zMJzKS68iu7fcuekSV6I6FnaWIziqS7lC2neucXqfRkL98fQsmm58AjfSnHh8sjJstFR783os3vfkvJJeXPS1+y5hgezPdZwQfG2HY4TFH7gEb5DpyaxQP5Sskm1M4vy7helC3Zp26E4QeG7ruHxSPvRNTxkFSzutw8X39HD6G22TBujaIfBwvPZKUqvQp/mR+l13SwepcfsdNI21TeOV5Oy7qf2Rpn1bmFTeHK0an2sSvX8LI4uPFh68Bb/wz89XMX5t+/DLfRepZ6f2of7bnof7sOP7xcVHr1U/fV2LnleobP0Rg92fPDjO9a6zKMHax4Gj5np/saIv48T1XGW+/CtZLZE9d/7MNMnbeGvVUVP2hY2Rjf1LdPsdtSGhv4ev5aFM8B47q7a4X810X2txqM/I7zcQHe6zmv/UZeed2iOJvxXof8VdqaDwUs5jSJnIFxsp/yHEbR4e5Sgvh7CCUePO0RLKkeTMxBeQvteHK5EP65Mxbm0OReRfvDoYqwdLyg6dc5CuPjPkTHsh3VQFQZ7znT7ekuRMxHOFIWFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE4OFE0O5uLgAQ4f/AAzHKvl/uPfPAAAAAElFTkSuQmCC" InformativeScreenshot="3ba8ccd79c0480a0e46e166ba1844a92.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NGetText DisplayName="Get Text 'Login'" sap:VirtualizedContainerService.HintSize="954,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="905405eb-ff09-4397-b283-982da1164c9a" TextString="[txtLogIn]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CvTextArea="104, 410, 130, 57" CvType="AnyWordGroup" DesignTimeRectangle="105, 405, 1710, 74" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='page-header' /&gt;" Guid="9cc74703-9a5c-46ba-8b80-fe9b6178403e" ImageBase64="" InformativeScreenshot="00938b6fa07693f229147b035c6923a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <If Condition="[txtLogIn.Contains(&quot;Login&quot;)]" sap:VirtualizedContainerService.HintSize="954,609.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,238" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;LogOut Successful&quot;]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;LogOut Fail&quot;]" />
                 </Sequence>
               </If.Else>
             </If>
